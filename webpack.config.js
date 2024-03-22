@@ -31,6 +31,6 @@ module.exports = {
             title: 'Required.app',
             filename: 'RequiredApp.html',
             template: 'src/index.html'
-        })
+        }),
     ]
 }

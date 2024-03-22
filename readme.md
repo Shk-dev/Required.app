@@ -2,7 +2,7 @@
 
 This project will be used primarily for educational purposes.
 
-Objective of the project: :
+Objective of the project: 
 1. Learn to use webpack
 2. Use JavaScript
 3. Using the SASS preprocessor
