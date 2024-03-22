@@ -1,4 +1,122 @@
-body{
-    background: #333;
-    color: white;
+$white: #fff;
+$navy-blue: #242a38;
+$dark-blue: #4e596f;
+$red-pink: #ff3366;
+$red-orange: #f78361;
+
+@mixin borbotor {
+	border-bottom: 2px solid $red-orange;
+}
+@mixin borbotpin {
+	border-bottom: 2px solid $red-pink;
+}
+
+html,
+body {
+	margin: 0;
+	background: $navy-blue;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	:hover,
+	::after {
+		box-sizing: border-box;
+	}
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+header {
+	display: flex;
+	justify-content: space-around;
+
+	margin: 24px 0;
+}
+
+.header_line {
+	width: 1150px;
+	margin: 0 auto;
+
+	box-shadow: 0px 0px 12px 4px $red-orange;
+
+	border-bottom: 2px solid $red-orange;
+
+	animation: 16s linear 1s infinite alternate line__anim;
+}
+
+@keyframes line__anim {
+	0% {
+		box-shadow: 0 0 12px 4px $red-orange;
+		@include borbotor();
+	}
+	25% {
+		box-shadow: 0 0 13px 4px $red-pink;
+		@include borbotpin();
+	}
+	50% {
+		box-shadow: 0 0 14px 4px $red-orange;
+		@include borbotor();
+	}
+	75% {
+		box-shadow: 0 0 15px 4px $red-pink;
+		@include borbotpin();
+	}
+	100% {
+		box-shadow: 0 0 16px 4px $red-orange;
+		@include borbotor();
+	}
+}
+
+.header__logo {
+	font-size: 36px;
+	color: $red-pink;
+}
+strong {
+	color: $red-orange;
+}
+
+.header__navigation {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}
+
+.nav__link {
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: none;
+	color: $red-orange;
+}
+.nav__link:hover {
+	color: $red-pink;
+}
+.nav__link:last-child::before {
+	content: '|';
+	color: $red-orange;
+	pointer-events: none;
+	cursor: default;
+	position: relative;
+	right: 10px;
+}
+.nav__link:last-child {
+	padding-top: 4px;
+}
+.line::before {
+	content: '|';
+	color: $red-orange;
+	pointer-events: none;
+	cursor: default;
+	position: relative;
+	left: 91px;
+}
+.app__link {
+	display: none;
 }

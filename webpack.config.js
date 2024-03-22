@@ -17,6 +17,7 @@ module.exports = {
 		static: {
 			directory: path.join(__dirname, 'dist'),
 		},
+		watchFiles: path.join(__dirname, 'src'),
 	},
 	module: {
 		rules: [
@@ -26,11 +27,10 @@ module.exports = {
 			},
 		],
 	},
-    plugins: [
-        new htmlWebpackPlugin({
-            title: 'Required.app',
-            filename: 'RequiredApp.html',
-            template: 'src/index.html'
-        }),
-    ]
+	plugins: [
+		new htmlWebpackPlugin({
+			template: './src/index.html',
+			filename: 'RequiredApp.html',
+		}),
+	],
 }
